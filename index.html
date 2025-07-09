@@ -16,25 +16,25 @@
         <div class="logo">TaekKi<span class="dot">.</span></div>
         <nav>
           <ul>
-            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#id-projects">Projects</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" class="contact-btn">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="home">
+    <main class="home" id="home">
       <div class="home-left">
         <p class="intro">Hey, I'm TaekKi 👋</p>
-        <h1><span class="highlight">프론트</span>엔드<br />개발자</h1>
-        <p class="desc">
-          I'm a frontend developer based in Korea, I'll help you build beautiful
-          websites your users will love.
-        </p>
+        <h1>
+          <span class="highlight">오늘보다 나은 코드</span>를 <br />
+          꿈꾸는 개발자, <br />민택기입니다.
+        </h1>
+        <p class="desc">코드를 쓰고, 커피를 마시고, 다시 코드를 씁니다.</p>
         <div class="buttons">
-          <a href="" class="btn primary">Contact</a>
-          <a href="#" class="btn secondary">Browse Projects</a>
+          <a href="#about" class="btn about">About</a>
+          <a href="#" class="btn browse">Browse Projects</a>
         </div>
       </div>
       <div class="home-right">
@@ -76,28 +76,28 @@
       <div class="project-list">
         <div class="project-card">
           <div class="project-image">
-            <img src="./assets/images/T4Y.png" alt="T4Y" />
+            <img src="./assets/images/T4Y.png" class="img1" alt="T4Y" />
+            <a href="https://github.com/SV-Summer-BootCamp-TeamJ/2023SB-Team-J"
+              ><div class="view-button">VIEW</div>
+            </a>
           </div>
           <div class="project-info">
-            <h3 class="project-title">
-              T4Y : This is for you
-              <span class="arrow">↗</span>
-            </h3>
+            <h3 class="project-title">T4Y : This is for you</h3>
             <p class="project-desc">
               소중한 순간을 그림처럼 간직할 수 있는 특별한 사진첩 사이트
             </p>
           </div>
         </div>
-        
+
         <div class="project-card">
           <div class="project-image">
             <img src="./assets/images/reminder.png" alt="JeongReminder" />
+            <a href="https://github.com/JeongReminder/ReminderFrontend">
+              <div class="view-button">VIEW</div>
+            </a>
           </div>
           <div class="project-info">
-            <h3 class="project-title">
-              정통알리미
-              <span class="arrow">↗</span>
-            </h3>
+            <h3 class="project-title">정통알리미</h3>
             <p class="project-desc">
               중요한 공지를 놓치지 않게 도와주는 알림 전용 어플
             </p>
@@ -105,7 +105,7 @@
         </div>
       </div>
     </section>
-  
+
     <!-- 경험 파트 -->
     <section class="experiences">
       <h2 class="section-title">EXPERIENCE<span class="dot">.</span></h2>
@@ -116,24 +116,36 @@
             <button>Techeer Partners 3기</button>
           </li>
           <div id="content-partners" class="experience-content">
-            <h3>프론트엔드<span style="color: #8a3ffc;">  @ 테커 파트너스</span></h3>
+            <h3>
+              프론트엔드<span style="color: #8a3ffc"> @ 테커 파트너스</span>
+            </h3>
             <p class="period">2023년 3월 - 2023년 6월</p>
             <div class="content-desc">
               <img src="./assets/images/check.png" alt="check" />
-              <p>주제를 하나 정해 일주일 동안 공부한 내용을 스터디 조원들에게 온라인으로 공유하면서 진행</p>
+              <p>
+                주제를 하나 정해 일주일 동안 공부한 내용을 스터디 조원들에게
+                온라인으로 공유하면서 진행
+              </p>
             </div>
             <div class="content-desc">
               <img src="./assets/images/check.png" alt="check" />
-              <p>격주로 현업에서 사용하는 스킬과 지식, 유용한 Tip이 담긴 현직자 세션을 제공</p>
+              <p>
+                격주로 현업에서 사용하는 스킬과 지식, 유용한 Tip이 담긴 현직자
+                세션을 제공
+              </p>
             </div>
           </div>
-          
+
           <li class="experience-card" onclick="showContent('bootcamp')">
             <div class="ex-bar" id="bar-bootcamp"></div>
             <button>Silicon Valley Bootcamp 2023</button>
           </li>
           <div id="content-bootcamp" class="experience-content">
-            <h3>프론트엔드<span style="color: #8a3ffc;">  @ 실리콘밸리 부트캠프</span></h3>
+            <h3>
+              프론트엔드<span style="color: #8a3ffc">
+                @ 실리콘밸리 부트캠프</span
+              >
+            </h3>
             <p class="period">2023년 6월 말 - 2023년 8월 초(6주)</p>
             <div class="content-desc">
               <img src="./assets/images/check.png" alt="check" />
@@ -144,14 +156,14 @@
               <p>내용 2</p>
             </div>
           </div>
-    
+
           <li class="experience-card" onclick="showContent('ict')">
             <div class="ex-bar" id="bar-ict"></div>
             <button>2024 ICT 한이음 멘토링</button>
           </li>
           <div id="content-ict" class="experience-content">
-            <h3>프론트엔드<span style="color: #8a3ffc;">  @ 실리콘밸리 부트캠프</span></h3>
-            <p class="period">2024년 6월 말 - 2023년 8월 초(6주)</p>
+            <h3>프론트엔드<span style="color: #8a3ffc"> @ 한이음</span></h3>
+            <p class="period">2024년 3월 - 2024년 10월</p>
             <div class="content-desc">
               <img src="./assets/images/check.png" alt="check" />
               <p>내용 1</p>
@@ -167,7 +179,7 @@
             <button>2025 우리 FIS 아카데미 5기</button>
           </li>
           <div id="content-fisa" class="experience-content">
-            <h3>풀스택<span style="color: #8a3ffc;">  @ 우리 FISA</span></h3>
+            <h3>풀스택<span style="color: #8a3ffc"> @ 우리 FISA</span></h3>
             <p class="period">2025년 7월 1일 - 2025년 12월 12일</p>
             <div class="content-desc">
               <img src="./assets/images/check.png" alt="check" />
@@ -191,31 +203,31 @@
           <p>JavaScript</p>
           <p>Dart</p>
           <p>React</p>
-          <p>Flutter</p>    
+          <p>Flutter</p>
         </div>
         <div class="develop-skill">
           <h2>툴</h2>
           <p>Git</p>
-          <p>Pigma</p> 
-          <p>Postman</p> 
-          <p>Docker</p> 
+          <p>Pigma</p>
+          <p>Postman</p>
+          <p>Docker</p>
         </div>
         <div class="develop-skill">
           <h2>프레임워크</h2>
           <p>React</p>
-          <p>Flutter</p> 
+          <p>Flutter</p>
         </div>
         <div class="develop-skill">
           <h2>서비스</h2>
-          <p>Firebase</p>    
+          <p>Firebase</p>
         </div>
         <div class="develop-skill">
           <h2>자격증</h2>
-          <p>정보처리기사</p>    
+          <p>정보처리기사</p>
         </div>
-    </div>
+      </div>
     </section>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

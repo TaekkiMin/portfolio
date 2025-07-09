@@ -17,7 +17,7 @@ header {
   width: 100%;
   background-color: #fcfcfd;
   z-index: 999;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* 내부 너비 제한 + 양쪽 정렬 */
@@ -54,7 +54,7 @@ nav ul li a {
   font-weight: 600;
 }
 
-nav ul li a.active {
+nav ul li a:hover {
   color: #6e06f2;
 }
 
@@ -68,6 +68,12 @@ nav ul li a.active {
 
 .home-left {
   max-width: 600px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.home-left.fade-out {
+  opacity: 0;
 }
 
 .home-left .intro {
@@ -76,7 +82,7 @@ nav ul li a.active {
 }
 
 .home-left h1 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 800;
   line-height: 1.2;
   margin: 0 0 20px;
@@ -107,13 +113,13 @@ nav ul li a.active {
   display: inline-block;
 }
 
-.primary {
+.about {
   background-color: #8a3ffc;
   color: white;
   border: none;
 }
 
-.secondary {
+.browse {
   background-color: white;
   color: #2d2d2d;
   border: 2px solid #2d2d2d;
@@ -147,7 +153,6 @@ nav ul li a.active {
 .section-title {
   font-size: 48px;
   font-weight: 800;
-
 }
 
 .section-title .dot {
@@ -167,12 +172,53 @@ nav ul li a.active {
   gap: 20px;
 }
 
+.project-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* 기존 이미지 스타일 유지 */
 .project-image img {
   width: 60%;
-  max-width: 800px;
+  max-width: 400px;
   border-radius: 20px;
   background: #ccc;
   object-fit: cover;
+
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* 호버 시 이미지 어둡게 */
+.project-image:hover img {
+  filter: brightness(60%);
+}
+
+/* VIEW 버튼 스타일 */
+.view-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-140%, -50%);
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  opacity: 0;
+  background: transparent;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* 클릭 방지 */
+}
+
+.view-button:hover {
+  cursor: pointer;
+}
+
+/* 호버 시 버튼 표시 */
+.project-image:hover .view-button {
+  opacity: 1;
+  pointer-events: auto; /* 클릭 가능하게 만들고 싶다면 */
 }
 
 .project-info {
@@ -283,7 +329,7 @@ button {
 }
 
 .period {
-  color: #83868c; 
+  color: #83868c;
   font-size: 12px;
   margin-bottom: 3px;
 }
@@ -295,8 +341,8 @@ button {
 }
 
 .content-desc img {
-  width: 2%; 
-  height: 2%; 
+  width: 2%;
+  height: 2%;
 }
 
 .content-desc p {
@@ -327,7 +373,7 @@ button {
 
 .develop-skill p {
   font-weight: 600;
-  color: #777e90; 
+  color: #777e90;
   margin: 0.5rem 0rem;
 }
 
@@ -344,7 +390,6 @@ button {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  
 }
 
 .contact {
@@ -422,7 +467,7 @@ button {
 }
 
 .contact-item a {
-  text-decoration-line: none
+  text-decoration-line: none;
 }
 
 .contact-item span {
