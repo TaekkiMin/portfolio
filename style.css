@@ -287,3 +287,31 @@ button {
 .content-desc p {
   font-size: 12px;
 }
+
+/* === 기술 섹션 === */
+.skills {
+  background-color: #fcfcfd;
+  padding: 0px 60px;
+  margin-bottom: 100px;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.develop-skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.develop-skill h2 {
+  color: #24262f;
+  margin-right: 10vw;
+}
+
+.develop-skill p {
+  font-weight: 600;
+  color: #777e90; 
+  margin: 0.5rem 0rem;
+}
