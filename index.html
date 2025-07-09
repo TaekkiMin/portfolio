@@ -42,11 +42,11 @@
       </div>
     </main>
 
+    <!-- 프로젝트 파트 -->
     <section class="projects">
       <h2 class="section-title">Projects<span class="dot">.</span></h2>
       <div class="project-list">
-        <!-- 프로젝트 1 -->
-         <div class="project-card">
+        <div class="project-card">
           <div class="project-image">
             <img src="./assets/images/T4Y.png" alt="T4Y" />
           </div>
@@ -60,9 +60,8 @@
             </p>
           </div>
         </div>
-
-        <!-- 프로젝트 2 -->
-         <div class="project-card">
+        
+        <div class="project-card">
           <div class="project-image">
             <img src="./assets/images/reminder.png" alt="JeongReminder" />
           </div>
@@ -76,9 +75,84 @@
             </p>
           </div>
         </div>
-  </div>
-</section>
+      </div>
+    </section>
   
+    <!-- 경험 파트 -->
+    <section class="experiences">
+      <h2 class="section-title">EXPERIENCE<span class="dot">.</span></h2>
+      <div class="experience-list">
+        <ul>
+          <li class="experience-card" onclick="showContent('partners')">
+            <div class="ex-bar" id="bar-partners"></div>
+            <button>Techeer Partners 3기</button>
+          </li>
+          <div id="content-partners" class="experience-content">
+            <h3>프론트엔드<span style="color: #8a3ffc;">  @ 테커 파트너스</span></h3>
+            <p class="period">2023년 3월 - 2023년 6월</p>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>주제를 하나 정해 일주일 동안 공부한 내용을 스터디 조원들에게 온라인으로 공유하면서 진행</p>
+            </div>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>격주로 현업에서 사용하는 스킬과 지식, 유용한 Tip이 담긴 현직자 세션을 제공</p>
+            </div>
+          </div>
+          
+          <li class="experience-card" onclick="showContent('bootcamp')">
+            <div class="ex-bar" id="bar-bootcamp"></div>
+            <button>Silicon Valley Bootcamp 2023</button>
+          </li>
+          <div id="content-bootcamp" class="experience-content">
+            <h3>프론트엔드<span style="color: #8a3ffc;">  @ 실리콘밸리 부트캠프</span></h3>
+            <p class="period">2023년 6월 말 - 2023년 8월 초(6주)</p>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>내용 1</p>
+            </div>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>내용 2</p>
+            </div>
+          </div>
+    
+          <li class="experience-card" onclick="showContent('ict')">
+            <div class="ex-bar" id="bar-ict"></div>
+            <button>2024 ICT 한이음 멘토링</button>
+          </li>
+          <div id="content-ict" class="experience-content">
+            <h3>프론트엔드<span style="color: #8a3ffc;">  @ 실리콘밸리 부트캠프</span></h3>
+            <p class="period">2024년 6월 말 - 2023년 8월 초(6주)</p>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>내용 1</p>
+            </div>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>내용 2</p>
+            </div>
+          </div>
+
+          <li class="experience-card" onclick="showContent('fisa')">
+            <div class="ex-bar" id="bar-fisa"></div>
+            <button>2025 우리 FIS 아카데미 5기</button>
+          </li>
+          <div id="content-fisa" class="experience-content">
+            <h3>풀스택<span style="color: #8a3ffc;">  @ 우리 FISA</span></h3>
+            <p class="period">2025년 7월 1일 - 2025년 12월 12일</p>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>내용 1</p>
+            </div>
+            <div class="content-desc">
+              <img src="./assets/images/check.png" alt="check" />
+              <p>내용 2</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </section>
   <script src="script.js"></script>
   </body>
 </html>
