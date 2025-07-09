@@ -23,3 +23,15 @@ function showContent(content) {
     selectedBar.style.backgroundColor = "#6e06f2";
   }
 }
+
+// Contact 모달 열기
+document.querySelector('.btn.primary').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('contactModal').style.display = 'flex';
+  });
+  
+  // 닫기
+  function closeModal() {
+    document.getElementById('contactModal').style.display = 'none';
+  }
+  

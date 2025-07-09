@@ -1,5 +1,6 @@
 html {
   padding: 0px 50px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,10 +11,24 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fcfcfd;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 내부 너비 제한 + 양쪽 정렬 */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 60px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -263,7 +278,7 @@ button {
 }
 
 /* 텍스트 스타일 */
-.experience-conten h3 {
+.experience-content h3 {
   margin: 0;
 }
 
@@ -314,4 +329,120 @@ button {
   font-weight: 600;
   color: #777e90; 
   margin: 0.5rem 0rem;
+}
+
+/* === 연락처 화면 === */
+/* 모달 오버레이 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* min-height: 40vh; */
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 200px;
+  width: 90%;
+  position: relative;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-left {
+  max-width: 500px;
+}
+
+.contact-left h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.purple {
+  color: #8a3ffc;
+}
+
+.contact-left p {
+  font-size: 18px;
+  color: #5f5f5f;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.contact-item img {
+  width: 6%;
+}
+
+.contact-item a {
+  text-decoration-line: none
+}
+
+.contact-item span {
+  color: #777e90;
+}
+
+.contact-right .image-wrapper {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 2px solid #c9bdf3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
 }

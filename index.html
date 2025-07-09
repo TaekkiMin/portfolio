@@ -12,14 +12,16 @@
   </head>
   <body>
     <header>
-      <div class="logo">TaekKi<span class="dot">.</span></div>
-      <nav>
-        <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <div class="logo">TaekKi<span class="dot">.</span></div>
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#id-projects">Projects</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="home">
@@ -31,7 +33,7 @@
           websites your users will love.
         </p>
         <div class="buttons">
-          <a href="#" class="btn primary">Get In Touch</a>
+          <a href="" class="btn primary">Contact</a>
           <a href="#" class="btn secondary">Browse Projects</a>
         </div>
       </div>
@@ -42,8 +44,34 @@
       </div>
     </main>
 
+    <!-- 연락처 파트 -->
+    <div class="modal-overlay" id="contactModal">
+      <main class="contact">
+        <div class="contact-left">
+          <h1>Contact<span class="purple">.</span></h1>
+          <div class="contact-info">
+            <div class="contact-item">
+              <img src="./assets/icons/message.png" />
+              <span>tktwin00@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <img src="./assets/icons/contact.png" />
+              <span>010-3412-1679</span>
+            </div>
+            <div class="contact-item">
+              <img src="./assets/icons/github.png" />
+              <a href="https://github.com/TaekkiMin">
+                <span>TaekkiMin</span>
+              </a>
+            </div>
+          </div>
+          <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+      </main>
+    </div>
+
     <!-- 프로젝트 파트 -->
-    <section class="projects">
+    <section class="projects" id="id-projects">
       <h2 class="section-title">Projects<span class="dot">.</span></h2>
       <div class="project-list">
         <div class="project-card">
@@ -187,6 +215,7 @@
         </div>
     </div>
     </section>
+
   <script src="script.js"></script>
   </body>
 </html>
